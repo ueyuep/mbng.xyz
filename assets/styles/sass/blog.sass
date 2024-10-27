@@ -1,0 +1,75 @@
+@mixin mobile
+  @media (max-width: 900px)
+    @content
+
+@mixin desktop
+  @media (min-width: 901px)
+    @content
+
+$grey: #919191
+$lightgrey: #C0C0C0
+$offwhite: #EBEBEB
+$blue-light: #60B1EB
+$blue-medium: #0089EB
+
+// Layout
+#content
+  padding: 54px 60px
+  @include mobile
+    padding: 24px 24px
+
+#title
+  display: flex
+  flex-flow: column nowrap
+  margin-bottom: 40px
+  .category
+    margin: 0 auto 6px 1px
+    font-size: 14px
+    line-height: 1
+    color: $grey
+    @include desktop
+      &:hover
+        color: $blue-light
+    @include mobile
+      margin-bottom: 4px
+      font-size: 13px
+  h2
+    margin: 0 0 6px 0
+    font-weight: 400
+    font-size: 26px
+    line-height: 1.4
+    @include mobile
+      margin-bottom: 4px
+      font-size: 22px
+  .date
+    margin: 0 0 0 1px
+    font-size: 12px
+    line-height: 1
+    color: $lightgrey
+    @include mobile
+      font-size: 11px
+
+p
+  font-weight: 400
+  font-size: 18px
+  line-height: 1.6
+  margin: 18px 0
+  @include mobile
+    font-size: 16px
+
+// Format
+em
+  padding-bottom: 1px
+  border-bottom: solid 1.6px
+  @include mobile
+    padding-bottom: 0px
+    border-bototm: solid 1.4px
+
+.blue
+  color: $blue-medium
+
+p.callout
+  padding: 14px 22px
+  margin: 24px -4px
+  background: #E8EDF2
+  border-radius: 12px
