@@ -1,0 +1,43 @@
+#content {
+  padding: 54px 60px;
+}
+@media (max-width: 900px) {
+  #content {
+    padding: 24px 24px;
+  }
+}
+
+.title {
+  position: relative;
+  padding: 34px 4px 13px;
+  border-bottom: dashed 1px #C0C0C0;
+  font-size: 18px;
+}
+@media (max-width: 900px) {
+  .title {
+    font-size: 15px;
+  }
+}
+.title .img {
+  position: absolute;
+  top: 20px;
+  left: 6px;
+  height: 32px;
+}
+@media (max-width: 900px) {
+  .title .img {
+    height: 24px;
+  }
+}
+.title .name {
+  position: absolute;
+  top: 16px;
+  left: 42px;
+  height: 20px;
+  line-height: 1;
+}
+.title .spec {
+  width: 100%;
+  padding-left: 38.5px;
+  font-size: 12px;
+}

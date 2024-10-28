@@ -1,0 +1,44 @@
+@mixin mobile
+  @media (max-width: 900px)
+    @content
+
+@mixin desktop
+  @media (min-width: 901px)
+    @content
+
+$grey: #919191
+$lightgrey: #C0C0C0
+$offwhite: #EBEBEB
+$lightblue: #60B1EB
+$mediumblue: #0089EB
+
+// Layout
+#content
+  padding: 54px 60px
+  @include mobile
+    padding: 24px 24px
+
+.title
+  position: relative
+  padding: 34px 4px 13px
+  border-bottom: dashed 1px $lightgrey
+  font-size: 18px
+  @include mobile
+    font-size: 15px
+  .img
+    position: absolute
+    top: 20px
+    left: 6px
+    height: 32px
+    @include mobile
+      height: 24px
+  .name
+    position: absolute
+    top: 16px
+    left: 42px
+    height: 20px
+    line-height: 1
+  .spec
+    width: 100%
+    padding-left: 38.5px
+    font-size: 12px
